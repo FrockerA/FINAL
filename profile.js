@@ -11,22 +11,63 @@ if (!loggedInUser) {
   `;
 
   const restaurants = ["Restaurant A", "Restaurant B", "Restaurant C"];
-  const restaurantList = document.getElementById("restaurantList");
+  const supermarkets = ["Supermarket X", "Supermarket Y", "Supermarket Z"];
 
-  restaurants.forEach((restaurant) => {
-    const div = document.createElement("div");
-    div.innerHTML = `
-      <p>${restaurant}</p>
-      <select>
-        <option value="">Rate</option>
-        <option value="1">1 Star</option>
-        <option value="2">2 Stars</option>
-        <option value="3">3 Stars</option>
-        <option value="4">4 Stars</option>
-        <option value="5">5 Stars</option>
-      </select>
-    `;
-    restaurantList.appendChild(div);
+  const restaurantSelect = document.getElementById("restaurantSelect");
+  const supermarketSelect = document.getElementById("supermarketSelect");
+
+  restaurants.forEach((restaurant, index) => {
+    const option = document.createElement("option");
+    option.value = restaurant;
+    option.innerText = restaurant;
+    restaurantSelect.appendChild(option);
+  });
+
+  supermarkets.forEach((supermarket, index) => {
+    const option = document.createElement("option");
+    option.value = supermarket;
+    option.innerText = supermarket;
+    supermarketSelect.appendChild(option);
+  });
+
+  restaurantSelect.addEventListener("change", (e) => {
+    const selectedRestaurant = e.target.value;
+    const restaurantRatingDiv = document.getElementById("restaurantRating");
+    if (selectedRestaurant) {
+      restaurantRatingDiv.innerHTML = `
+        <label for="restaurantRatingSelect">Rate ${selectedRestaurant}:</label>
+        <select id="restaurantRatingSelect">
+          <option value="">Select Rating</option>
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+        </select>
+      `;
+    } else {
+      restaurantRatingDiv.innerHTML = "";
+    }
+  });
+
+  supermarketSelect.addEventListener("change", (e) => {
+    const selectedSupermarket = e.target.value;
+    const supermarketRatingDiv = document.getElementById("supermarketRating");
+    if (selectedSupermarket) {
+      supermarketRatingDiv.innerHTML = `
+        <label for="supermarketRatingSelect">Rate ${selectedSupermarket}:</label>
+        <select id="supermarketRatingSelect">
+          <option value="">Select Rating</option>
+          <option value="1">1 Star</option>
+          <option value="2">2 Stars</option>
+          <option value="3">3 Stars</option>
+          <option value="4">4 Stars</option>
+          <option value="5">5 Stars</option>
+        </select>
+      `;
+    } else {
+      supermarketRatingDiv.innerHTML = "";
+    }
   });
 }
 

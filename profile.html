@@ -8,12 +8,32 @@
 </head>
 <body>
   <h1>Welcome to Your Profile</h1>
+
   <div id="userProfile"></div>
-  <h2>Rate Restaurants</h2>
-  <div id="restaurantList"></div>
+
+  <h2>Rate Your Favorite Places</h2>
+  
+  <div class="rating-container">
+    <div id="restaurantSection" class="rating-column">
+      <h3>Rate a Restaurant</h3>
+      <select id="restaurantSelect">
+        <option value="">Select a Restaurant</option>
+      </select>
+      <div id="restaurantRating" class="rating-options"></div>
+    </div>
+
+    <div id="supermarketSection" class="rating-column">
+      <h3>Rate a Supermarket</h3>
+      <select id="supermarketSelect">
+        <option value="">Select a Supermarket</option>
+      </select>
+      <div id="supermarketRating" class="rating-options"></div>
+    </div>
+  </div>
+
   <br>
   <button onclick="logout()">Log Out</button>
 
   <script src="profile.js"></script>
-</br>
+</body>
 </html>
