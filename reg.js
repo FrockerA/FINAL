@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const savedEntries = JSON.parse(localStorage.getItem('formEntries')) || []; // Load existing entries or empty array if none
+    const savedEntries = JSON.parse(localStorage.getItem('formEntries')) || []; 
     const list = document.getElementById('entriesList');
     list.innerHTML = '';
 

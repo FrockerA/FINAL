@@ -20,10 +20,8 @@ document.getElementById("signUpForm").addEventListener("submit", function (e) {
       return;
     }
   
-    // Retrieve existing users or initialize an empty array
     let users = JSON.parse(localStorage.getItem("users")) || [];
-  
-    // Check if the user already exists
+
     const existingUser = users.find((user) => user.email === email);
     if (existingUser) {
       messageDiv.textContent = "User already exists with this email.";
@@ -31,16 +29,14 @@ document.getElementById("signUpForm").addEventListener("submit", function (e) {
       return;
     }
   
-    // Add the new user
+
     users.push({ fullName, email, password });
   
-    // Save to localStorage
     localStorage.setItem("users", JSON.stringify(users));
   
     messageDiv.textContent = "Sign-up successful! You can now log in.";
     messageDiv.style.color = "green";
   
-    // Clear the form
     document.getElementById("signUpForm").reset();
   });
   

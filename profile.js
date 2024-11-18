@@ -7,14 +7,13 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Display user profile
   const userProfile = document.getElementById("userProfile");
   userProfile.innerHTML = `
     <p><strong>Name:</strong> ${loggedInUser.fullName}</p>
     <p><strong>Email:</strong> ${loggedInUser.email}</p>
   `;
 
-  // Initialize restaurants and supermarkets
+
   const restaurants = ["Restaurant A", "Restaurant B", "Restaurant C"];
   const supermarkets = ["Supermarket X", "Supermarket Y", "Supermarket Z"];
 
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function populateDropdown(selectId, options, ratingDivId) {
   const selectElement = document.getElementById(selectId);
-  selectElement.innerHTML = `<option value="">Select an option</option>`; // Reset options
+  selectElement.innerHTML = `<option value="">Select an option</option>`; 
   options.forEach((option) => {
     const optionElement = document.createElement("option");
     optionElement.value = option;
@@ -50,7 +49,7 @@ function populateDropdown(selectId, options, ratingDivId) {
         </select>
       `;
     } else {
-      ratingDiv.innerHTML = ""; // Clear if nothing is selected
+      ratingDiv.innerHTML = ""; 
     }
   });
 }
