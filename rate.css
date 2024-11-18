@@ -1,0 +1,144 @@
+.sidebarz {
+    font-family: Arial Black, sans-serif;
+    margin: 0;
+    overflow-x: hidden;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0; 
+    background-color: #000000;
+    color: white;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding-top: 60px;
+    z-index: 9999;
+  }
+
+  .sidebar a {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: white;
+    display: block;
+  }
+
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 60px;
+    background: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+
+  .main-content {
+    padding: 20px;
+    transition: margin-left 0.3s;
+  }
+
+  .open-btn {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    font-size: 30px;
+    background-color: #000000;
+    color: white;
+    width: 75px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 9998;
+  }
+
+html, body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.question p {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+form .question {
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+form .options label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form textarea, form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: none;
+    font-size: 14px;
+}
+
+form button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-family: Arial Black, sans-serif;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #b10000;
+    transition: 500ms;
+}
+
+.hidden {
+    display: none;
+}
+
+#thankYouMessage {
+    text-align: center;
+    margin-top: 20px;
+}

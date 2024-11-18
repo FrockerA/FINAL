@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Us</title>
+    <link rel="icon" href="/pics/logo.jpg" sizes="16x16">
+    <link rel="stylesheet" href="rate.css">
+</head>
+<body>
+    <div class="container">
+        <h1>We Value Your Feedback!</h1>
+        <p>Please take a moment to rate your experience with our website.</p>
+        
+        <form id="rateForm">
+            <div class="question">
+                <label for="question1">1. How would you rate your overall experience with our website?</label>
+                <div class="options">
+                    <label><input type="radio" name="design" value="Excellent"> Excellent</label>
+                    <label><input type="radio" name="design" value="Good"> Good</label>
+                    <label><input type="radio" name="design" value="Average"> Satisfactory</label>
+                    <label><input type="radio" name="design" value="Poor"> Poor</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <label for="question2">2. What features do you like most?</label>
+                <textarea id="question2" name="features" placeholder="Write your answer here..."></textarea>
+            </div>
+
+            <div class="question">
+                <label for="question3">3. How easy was it to find the information you were looking for?</label>
+                <select id="question3" name="navigation">
+                    <option value="Very Easy">Very Easy</option>
+                    <option value="Easy">Easy</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Difficult">Difficult</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="question4">4. How helpful and clear was the information on the website?</label>
+                <select id="question3" name="information">
+                    <option value="Very Helpful">Very Helpful</option>
+                    <option value="Helpful">Helpful</option>
+                    <option value="Partially helpful">Partially helpful</option>
+                    <option value="Not Helpful">Not Helpful</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="question5">5. How well does the website work on your mobile phone or tablet?</label>
+                <select id="question3" name="accessibility">
+                    <option value="Excellent">Excellent</option>
+                    <option value="Good">Good</option>
+                    <option value="Satisfactory">Satisfactory</option>
+                    <option value="Poor">Poor</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="question6">6. Would you recommend our website to your friends or colleagues?</label>
+                <select id="question3" name="accessibility">
+                    <option value="Yes, definitely">Yes, definitely</option>
+                    <option value="Probably yes">Probably yes</option>
+                    <option value="Probably no">Probably no</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+
+            <div class="question">
+                <label for="question7">7. Any additional comments or suggestions?</label>
+                <textarea id="question4" name="comments" placeholder="Write your feedback here..."></textarea>
+            </div>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="thankYouMessage" class="hidden">
+            <h2>Thank you for your feedback!</h2>
+            <p>We appreciate your input and will use it to improve our website.</p>
+        </div>
+    </div>
+
+    <div id="sidebarz" class="sidebarz">
+        <div id="sidebar" class="sidebar">
+          <button onclick="closeSidebar()" class="close-btn">&times;</button>
+          <a href="home.html">Home</a>
+          <a href="local_rests.html">Local Restaurants</a>
+          <a href="local_markets.html">Local Markets</a>
+          <a href="rate.html">Rate Us</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="login.html">Log in</a>
+
+        </div>
+      
+        <div class="main-content">
+          <button onclick="openSidebar()" class="open-btn">☰</button>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+    <footer style="background-color: #000; color: white; text-align: center; padding: 20px 0; margin-top: auto; width: 100%;">
+        <p>&copy; 2024 Bite Around Town. All Rights Reserved.</p>
+    </footer>
+    <script src="rate.js"></script>
+</body>
+</html>
