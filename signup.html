@@ -6,6 +6,7 @@
     <title>Sign Up | Bite Around Town</title>
     <link rel="icon" href="favicon-16x16.png" sizes="16x16">
     <link rel="stylesheet" href="signup.css">
+    <link rel="stylesheet" href="css.css">
   </head>
   <body>
     <main class="container">
@@ -31,6 +32,24 @@
         <p class="small-text">By signing up, you agree to our <a href="#">Terms & Conditions</a>.</p>
       </form>
       <div id="message" class="message"></div>
+
+      <div id="sidebarz" class="sidebarz">
+        <div id="sidebar" class="sidebar">
+          <button onclick="closeSidebar()" class="close-btn">&times;</button>
+          <a href="home.html">Home</a>
+          <a href="#">Local Restaurants</a>
+          <a href="#">Local Markets</a>
+          <a href="#">Rate Us</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="login.html">Log in</a>
+
+        </div>
+      
+        <div class="main-content">
+          <button onclick="openSidebar()" class="open-btn">☰</button>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
     </main>
     <footer class="footer">
       &copy; 2024 Bite Around Town. All Rights Reserved.

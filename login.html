@@ -6,6 +6,7 @@
   <title>Login</title>
   <link rel="stylesheet" href="styles.css">
   <link rel="icon" href="favicon-16x16.png" sizes="16x16">
+  <link rel="stylesheet" href="css.css">
 </head>
 <body>
   <h1>Log in</h1>
@@ -17,7 +18,26 @@
     <button type="submit">Log In</button>
   </form>
   <div id="loginMessage"></div>
+  <div id="sidebarz" class="sidebarz">
+    <div id="sidebar" class="sidebar">
+      <button onclick="closeSidebar()" class="close-btn">&times;</button>
+      <a href="home.html">Home</a>
+      <a href="#">Local Restaurants</a>
+      <a href="#">Local Markets</a>
+      <a href="#">Rate Us</a>
+      <a href="signup.html">Sign Up</a>
+      <a href="login.html">Log in</a>
 
+    </div>
+    <script src="sidebar.js"></script>
+  
+    <div class="main-content">
+      <button onclick="openSidebar()" class="open-btn">☰</button>
+    </div>
+  </div>
+  <footer class="footer">
+    &copy; 2024 Bite Around Town. All Rights Reserved.
+  </footer>
   <script src="login.js"></script>
 </body>
 </html>
