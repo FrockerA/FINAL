@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bite Around Town</title>
+    <link rel="icon" href="/pics/logo.jpg" sizes="16x16">
+    <link rel="stylesheet" href="styles_market.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Local Markets in Kazakhstan</h1>
+        <div class="supermarkets-grid">
+            <a href="/markets_info/magnum.html" class="supermarket" data-images="/pics/magnum.jpg,/pics/magnum2.jpg,/pics/magnum3.jpg">
+                <div class="image-wrapper">
+                    <img src="/pics/magnum.jpg" alt="Magnum" class="active">
+                </div>
+                <div class="overlay">Magnum</div>
+            </a>
+
+            <a href="/markets_info/small.html" class="supermarket" data-images="/pics/small.png,/pics/small2.jpg,/pics/small3.jfif">
+                <div class="image-wrapper">
+                    <img src="/pics/small.png" alt="Small" class="active">
+                </div>
+                <div class="overlay">Small</div>
+            </a>
+
+            <a href="/markets_info/galmart.html" class="supermarket" data-images="/pics/galmart.jpg,/pics/galmart2.jpg,/pics/galmart3.jpg">
+                <div class="image-wrapper">
+                    <img src="/pics/galmart.jpg" alt="Galmart" class="active">
+                </div>
+                <div class="overlay">Galmart</div>
+            </a>
+
+            <a href="/markets_info/svetofor.html" class="supermarket" data-images="/pics/svetofor.jpg,/pics/svetofor2.jpg,/pics/svetofor3.jpg">
+                <div class="image-wrapper">
+                    <img src="/pics/svetofor.jpg" alt="Svetofor" class="active">
+                </div>
+                <div class="overlay">Svetofor</div>
+            </a>
+
+            <a href="/markets_info/mart.html" class="supermarket" data-images="/pics/mart.gif,/pics/mart2.jpg,/pics/mart3.jpg">
+                <div class="image-wrapper">
+                    <img src="/pics/mart.gif" alt="Mart" class="active">
+                </div>
+                <div class="overlay">Mart</div>
+            </a>
+
+            <a href="/markets_info/fermag.html" class="supermarket" data-images="/pics/fermag.jpg,/pics/fermag2.jpg,/pics/fermag3.jpg">
+                <div class="image-wrapper">    
+                    <img src="/pics/fermag.jpg" alt="FerMag" class="active">
+                </div>
+                <div class="overlay">FerMag</div>
+            </a>
+        </div>
+    </div>
+
+    <div id="sidebarz" class="sidebarz">
+        <div id="sidebar" class="sidebar">
+          <button onclick="closeSidebar()" class="close-btn">&times;</button>
+          <a href="home.html">Home</a>
+          <a href="local_rests.html">Local Restaurants</a>
+          <a href="local_markets.html">Local Markets</a>
+          <a href="#">Rate Us</a>
+          <a href="signup.html">Sign Up</a>
+          <a href="login.html">Log in</a>
+
+        </div>
+      
+        <div class="main-content">
+          <button onclick="openSidebar()" class="open-btn">☰</button>
+        </div>
+    </div>
+    <script src="sidebar.js"></script>
+    <script src="script1.js"></script>
+    <footer style="background-color: #000; color: white; text-align: center; padding: 20px 0;">
+        <p>&copy; 2024 Bite Around Town. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

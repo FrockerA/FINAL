@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
 
 
-  const restaurants = ["Restaurant A", "Restaurant B", "Restaurant C"];
-  const supermarkets = ["Supermarket X", "Supermarket Y", "Supermarket Z"];
+  const restaurants = ["Seven Bar and Restaurant, Almaty", "La Rivière, Astana", "Sandyq, Shymkent" , "Gastro Grill BALKON, Karagandy" , "Che Chil Pub, Aktau" , "Alpenhof, Pavlodar"];
+  const supermarkets = ["Magnum", "Small", "Galmart", "Svetofor", "Mart", "FerMag"];
 
   populateDropdown("restaurantSelect", restaurants, "restaurantRating");
   populateDropdown("supermarketSelect", supermarkets, "supermarketRating");
