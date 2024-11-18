@@ -13,6 +13,7 @@ if (!loggedInUser) {
   const restaurants = ["Restaurant A", "Restaurant B", "Restaurant C"];
   const supermarkets = ["Supermarket X", "Supermarket Y", "Supermarket Z"];
 
+  // Get select elements for restaurants and supermarkets
   const restaurantSelect = document.getElementById("restaurantSelect");
   const supermarketSelect = document.getElementById("supermarketSelect");
 
@@ -69,8 +70,58 @@ if (!loggedInUser) {
       supermarketRatingDiv.innerHTML = "";
     }
   });
+
+  displayPreviousRatings();
 }
 
+function submitRating() {
+  const restaurantSelect = document.getElementById("restaurantSelect");
+  const supermarketSelect = document.getElementById("supermarketSelect");
+  const restaurantRatingSelect = document.getElementById("restaurantRatingSelect");
+  const supermarketRatingSelect = document.getElementById("supermarketRatingSelect");
+
+  const restaurant = restaurantSelect.value;
+  const supermarket = supermarketSelect.value;
+  let rating = "";
+
+  if (restaurant && restaurantRatingSelect.value) {
+    rating = `Restaurant: ${restaurant} - ${restaurantRatingSelect.value} Stars`;
+    saveRating("restaurant", restaurant, restaurantRatingSelect.value);
+  }
+
+  if (supermarket && supermarketRatingSelect.value) {
+    rating = `Supermarket: ${supermarket} - ${supermarketRatingSelect.value} Stars`;
+    saveRating("supermarket", supermarket, supermarketRatingSelect.value);
+  }
+
+  if (rating) {
+    displayPreviousRatings();
+  }
+}
+
+function saveRating(type, name, rating) {
+  const ratings = JSON.parse(localStorage.getItem("ratings")) || [];
+  ratings.push({ type, name, rating });
+  localStorage.setItem("ratings", JSON.stringify(ratings));
+}
+
+function displayPreviousRatings() {
+  const ratings = JSON.parse(localStorage.getItem("ratings")) || [];
+  const displayRatings = document.getElementById("displayRatings");
+
+  if (ratings.length > 0) {
+    displayRatings.innerHTML = "";
+    ratings.forEach(rating => {
+      const div = document.createElement("div");
+      div.innerHTML = `<p>${rating.type === "restaurant" ? "Restaurant" : "Supermarket"}: ${rating.name} - ${rating.rating} Stars</p>`;
+      displayRatings.appendChild(div);
+    });
+  } else {
+    displayRatings.innerHTML = "<p>No ratings yet.</p>";
+  }
+}
+
+// Logout function
 function logout() {
   localStorage.removeItem("loggedInUser");
   alert("Logged out successfully.");

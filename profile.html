@@ -4,35 +4,46 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profile</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="profile.css">
 </head>
 <body>
-  <h1>Welcome to Your Profile</h1>
+  <div class="container">
+    <h1>Welcome to Your Profile</h1>
 
-  <div id="userProfile"></div>
+    <div id="userProfile"></div>
 
-  <h2>Rate Your Favorite Places</h2>
-  
-  <div class="rating-container">
-    <div id="restaurantSection" class="rating-column">
-      <h3>Rate a Restaurant</h3>
-      <select id="restaurantSelect">
-        <option value="">Select a Restaurant</option>
-      </select>
-      <div id="restaurantRating" class="rating-options"></div>
+    <h2>Rate Your Favorite Places</h2>
+    
+    <div class="rating-container">
+      <div id="restaurantSection" class="rating-column">
+        <h3>Rate a Restaurant</h3>
+        <select id="restaurantSelect">
+          <option value="">Select a Restaurant</option>
+        </select>
+        <div id="restaurantRating" class="rating-options"></div>
+      </div>
+
+      <div id="supermarketSection" class="rating-column">
+        <h3>Rate a Supermarket</h3>
+        <select id="supermarketSelect">
+          <option value="">Select a Supermarket</option>
+        </select>
+        <div id="supermarketRating" class="rating-options"></div>
+      </div>
     </div>
 
-    <div id="supermarketSection" class="rating-column">
-      <h3>Rate a Supermarket</h3>
-      <select id="supermarketSelect">
-        <option value="">Select a Supermarket</option>
-      </select>
-      <div id="supermarketRating" class="rating-options"></div>
+    <div id="submitSection" class="submit-section">
+      <button id="submitButton" onclick="submitRating()">Submit Rating</button>
     </div>
+
+    <div id="submittedRatings">
+      <h3>Your Submitted Ratings</h3>
+      <div id="displayRatings"></div>
+    </div>
+
+    <br>
+    <button onclick="logout()">Log Out</button>
   </div>
-
-  <br>
-  <button onclick="logout()">Log Out</button>
 
   <script src="profile.js"></script>
 </body>
