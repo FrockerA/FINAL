@@ -1,0 +1,109 @@
+/* General Styles */
+body {
+    font-family: Arial Black, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  h1, h2 {
+    color: #222;
+  }
+  
+  /* Form Styles */
+  form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+  
+  form input, form button, form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  form button {
+    background-color: #ff0000;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #ff0000;
+  }
+  
+  form #loginMessage, form #message {
+    text-align: center;
+    font-size: 14px;
+  }
+  
+  /* Profile Page Styles */
+  #userProfile {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  #userProfile p {
+    margin: 8px 0;
+    font-size: 18px;
+  }
+  
+  #restaurantList {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  #restaurantList div {
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #restaurantList select {
+    width: 120px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background: #c82333;
+  }
+  
